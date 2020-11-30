@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #150C2D;
+  background-image: url(5a6af94ab653b1f0c510336b7da97f9b.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+a {
+  text-decoration: none; }
+
+button {
+  outline: none; }
+

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+//button Monsserat /  bold
+//Or Monserrat /medium
+// Form fields Popins medium
+//Form title Popins medium
+@import './_vars';
+
+body {
+    margin: 0;
+    background-color: $main_bg_color;
+    background-image: url('../src/assets/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+}
+button {
+    outline: none;
+}
