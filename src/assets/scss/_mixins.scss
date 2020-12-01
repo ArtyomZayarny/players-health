@@ -1,4 +1,4 @@
-@import './_vars';
+@import './vars';
 
 @mixin btn-text($size,$color) {
     font-family: $Montserrat;
@@ -8,3 +8,10 @@
     font-weight:bold;
     text-transform: uppercase; 
 }
+@mixin text($size,$fontWeight,$lineHeight) {
+    font-family: $Popins;
+    font-weight: $fontWeight;
+    font-size: $size;
+    line-height: $lineHeight;
+}
+

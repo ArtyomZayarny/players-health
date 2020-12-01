@@ -1,3 +1,9 @@
 .header {
-    
+    .container {
+        padding:25px 32px;
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }

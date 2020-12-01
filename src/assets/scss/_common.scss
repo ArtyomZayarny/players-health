@@ -1,11 +1,66 @@
-@import './_mixins';
-@import './_vars';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+button {
+    outline: none;
+    overflow: hidden;
+    position: relative;
+   &:hover {
+       cursor: pointer;
+   }
+   &::after {
+    content: "";
+    background: $main_bg_color;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    left:0;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  &:active:after {
+    color:$white;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+}
+
+body {
+    margin: 0;
+    background-color: $main_bg_color;
+    background-image: url('../src/assets/images/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:100vh;
+}
+input:focus {
+    outline: none;
+}
+
+.btn{
+    border-radius: 22.5px; 
+    padding: 12.5px 0;
+    border:none;
+    text-transform: uppercase;
+}
 
 button {
     @include btn-text(11px,$white);
-   
 }
-button.sign-in {
+button.sign-up {
     border:2px solid $white;
     background-color: transparent;
     box-shadow: 0px 5px 15px rgba(37, 25, 76, 0.2);
@@ -16,4 +71,16 @@ button.sign-in {
         background: linear-gradient(118.81deg, #99EE62 16.91%, #2CF6A7 90.19%);
         color:$black;
     }
+}
+button.sign-in {
+    background: linear-gradient(118.81deg, #99EE62 16.91%, #2CF6A7 90.19%);
+    box-shadow: 0px 5px 15px rgba(37, 25, 76, 0.2);
+    @include btn-text(11px,$black)
+}
+
+
+button.with {
+    
+    @include btn-text(11px,$white);
+    
 }

@@ -11,24 +11,33 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__logo">
-                <a href="index.html">
-                    <img src="../src/assets/images/logo.svg" />
-                </a>
-            </div>
-            <div class="header-btns-area">
-                <button class="sign-in">sign up</button>
+            <div class="content">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="../src/assets/images/logo.svg" />
+                    </a>
+                </div>
+                <div class="header-btns-area">
+                    <button class="sign-up">sign up</button>
+                </div>
             </div>
         </div>
     </header>
-    <main class="content">
+    <main class="main">
         <div class="container">
-            <div class="content__form">
-                <h2>Sign in</h2>
-                <form action="">
-                    <input type="text" name="contact" />
-                    <input type="password" name="password">
-                </form>
+            <div class="content">
+                <div class="form">
+                    <h2 class="form__title">Sign in</h2>
+                    <form action="" class="sign-in">
+                        <input type="text" name="contact" placeholder="Email / phone number" />
+                        <input type="password" name="password" placeholder="Password">
+                    </form>
+                    <a href="#" class="form__reset">Reset password</a>
+                    <div class="btns-area">
+                        <button class="btn sign-in">Sign in</button>
+                        <button class="btn with">Sign in with</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
