@@ -1,0 +1,19 @@
+@import './_mixins';
+@import './_vars';
+
+button {
+    @include btn-text(11px,$white);
+   
+}
+button.sign-in {
+    border:2px solid $white;
+    background-color: transparent;
+    box-shadow: 0px 5px 15px rgba(37, 25, 76, 0.2);
+    border-radius: 22.5px;
+    padding: 10.5px 44.1px;
+    transition: all 0.3s ease;
+    &:hover {
+        background: linear-gradient(118.81deg, #99EE62 16.91%, #2CF6A7 90.19%);
+        color:$black;
+    }
+}

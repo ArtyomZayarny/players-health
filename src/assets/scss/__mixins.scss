@@ -1,0 +1,10 @@
+@import './_vars';
+
+@mixin btn-text($size,$color) {
+    font-family: $Montserrat;
+    font-size: $size;
+    color:$color;
+    line-height:20px;
+    font-weight:bold;
+    text-transform: uppercase; 
+}
