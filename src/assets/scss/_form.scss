@@ -37,26 +37,29 @@ form.sign-in {
             color:$inputTextColor;
             @include text(14px,500,21px);
         }
+        @media (max-width:525px) {
+            width: 200px;
+        }
     }
 
 }
 .form {
-    max-width: 390px;
+    width: 390px;
     text-align: center;
+
     &__title {
         @include text(32px,500,37px);
         text-transform: capitalize;
         color:$white;
         margin-bottom: 48px;
     }
-    &__reset {
-        @include text(16px,400,25px);
-        color:$white;
-    }
     .btns-area {
         display: flex;
         flex-direction: column;
         max-width: 251px;
         margin: 0 auto;
+    }
+    @media (max-width:525px) {
+        width: 100%;
     }
 }

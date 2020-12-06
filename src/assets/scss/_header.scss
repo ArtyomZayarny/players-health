@@ -4,6 +4,13 @@
         .content {
             display: flex;
             justify-content: space-between;
+            @media (max-width:525px) {
+                flex-direction: column;
+                align-items: center;
+                .header-btns-area {
+                    margin-top: 20px;
+                }
+            }
         }
     }
 }
