@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --plyr-color-main:linear-gradient(180deg, #2CDA9C 0%, #0BBF7F 100%);
+}
 a {
     text-decoration: none;
 }
@@ -34,7 +38,6 @@ input:focus {
 /***************** BUTTONS ***************/
 .btn{
     border-radius: 22.5px; 
-    padding: 12.5px 0;
     border:none;
     text-transform: uppercase;
 }
@@ -68,9 +71,15 @@ button.sign-up {
 button.sign-in {
     background: linear-gradient($gradient);
     @include btn-text(11px,$black);
-    margin-bottom: 19px;
     border:2px solid transparent;
+    display: flex;
+    width: 100%;
+    padding: 10.5px 0;
+    max-width: 251px;
+    justify-content: center;
+    margin: 0 auto;
     transition: all 0.3s ease;
+
     &:hover {
         background: transparent;
         color:$white;
@@ -99,6 +108,16 @@ button.with {
         background: linear-gradient($gradient);
     }
 }
+button.confirm {
+    background-color: $white;
+    padding: 12px 64px;
+    @include btn-text(11px,$gray);
+    &:hover {
+        background-color: $lightGreen2;
+        color:$white
+    }
+    
+}
 /***************** BUTTONS ***************/
 
 span.or {
@@ -109,7 +128,7 @@ span.or {
     line-height: 17px;
     display: block;
     position: relative;
-    margin-bottom: 19px;
+    margin:22px 0;
     &:before {
         content:'';
         display: block;
@@ -144,16 +163,46 @@ span.or {
     position: absolute;
     z-index: -1;
     &.one {
-        bottom: -175%;
-        left: -50%;
-        background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.5) 70%);
+        top: -212%;
+        left: -104%;
+        background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.1) 70%);
     }
     &.two {
-        top: -120%;
-        left: -50%;
-        background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.2) 70%);
+        top: 0;
+        left: -98%;
+        background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.4) 70%);
     }
-    
+   
 }
+.deco {
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+   
+        &.first {
+        width:944px;
+        height:646px;
+        top:0;
+        @media (max-width:992px) {
+            width: 100%;
+        }
+    }
+        &.second {
+            width: 850px;
+            height:261px;
+            bottom:0;
+            @media (max-width:992px) {
+                width: 100%;
+            }
+        }
+}
+.break {
+    background-color: $breakLineColor;
+    width: 100%;
+    height: 1px;
+    display: block;
+    border:none
+}
+
 
 

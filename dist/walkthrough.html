@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player's Health</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
+</head>
+
+<body class="walkthrough">
+    <header class="header">
+        <div class="container">
+            <div class="content">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="../src/assets/images/logo.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <span class="deco second">
+        <span class="circle two"></span>
+    </span>
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <h1>Welcome aboard Coach</h1>
+                <p>Please watch the video to proceed</p>
+                <div class="video-wrapper">
+                    <video id="player" class="video" playsinline data-poster="../src/assets/images/poster.png">
+                        <source src="../src/assets/video/BG Video.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <p class="confirm">Confirm that you watched the Training Video</p>
+                <button class="btn confirm">Confirm</button>
+            </div>
+        </div>
+    </main>
+    <div class="rectangle first"></div>
+    <div class="rectangle second"></div>
+    <footer></footer>
+    <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+    <script>
+        const player = new Plyr('#player');
+
+        player.toggleControls(false)
+
+        player.on('play', event => {
+            player.toggleControls(true);
+        });
+    </script>
+</body>
+
+</html>

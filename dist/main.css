@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0; }
 
+:root {
+  --plyr-color-main:linear-gradient(180deg, #2CDA9C 0%, #0BBF7F 100%); }
+
 a {
   text-decoration: none; }
 
@@ -33,7 +36,6 @@ input:focus {
 /***************** BUTTONS ***************/
 .btn {
   border-radius: 22.5px;
-  padding: 12.5px 0;
   border: none;
   text-transform: uppercase; }
 
@@ -72,8 +74,13 @@ button.sign-in {
   line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 19px;
   border: 2px solid transparent;
+  display: flex;
+  width: 100%;
+  padding: 10.5px 0;
+  max-width: 251px;
+  justify-content: center;
+  margin: 0 auto;
   transition: all 0.3s ease; }
   button.sign-in:hover {
     background: transparent;
@@ -99,6 +106,19 @@ button.with {
   button.with:hover {
     background: linear-gradient(118.81deg, #99EE62 16.91%, #2CF6A7 90.19%); }
 
+button.confirm {
+  background-color: #FFFFFF;
+  padding: 12px 64px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #233F54;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  button.confirm:hover {
+    background-color: #20F7AE;
+    color: #FFFFFF; }
+
 /***************** BUTTONS ***************/
 span.or {
   color: #FFFFFF;
@@ -108,7 +128,7 @@ span.or {
   line-height: 17px;
   display: block;
   position: relative;
-  margin-bottom: 19px; }
+  margin: 22px 0; }
   span.or:before {
     content: '';
     display: block;
@@ -144,13 +164,39 @@ span.or {
   position: absolute;
   z-index: -1; }
   .circle.one {
-    bottom: -175%;
-    left: -50%;
-    background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.5) 70%); }
+    top: -212%;
+    left: -104%;
+    background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.1) 70%); }
   .circle.two {
-    top: -120%;
-    left: -50%;
-    background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.2) 70%); }
+    top: 0;
+    left: -98%;
+    background: linear-gradient(90deg, transparent 0%, rgba(16, 65, 46, 0.4) 70%); }
+
+.deco {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+  .deco.first {
+    width: 944px;
+    height: 646px;
+    top: 0; }
+    @media (max-width: 992px) {
+      .deco.first {
+        width: 100%; } }
+  .deco.second {
+    width: 850px;
+    height: 261px;
+    bottom: 0; }
+    @media (max-width: 992px) {
+      .deco.second {
+        width: 100%; } }
+
+.break {
+  background-color: #DFDFDF;
+  width: 100%;
+  height: 1px;
+  display: block;
+  border: none; }
 
 .header .container {
   padding: 25px 32px; }
@@ -164,7 +210,7 @@ span.or {
         .header .container .content .header-btns-area {
           margin-top: 20px; } }
 
-form.sign-in {
+.field-wrap {
   display: flex;
   flex-direction: column;
   background-color: #FFFFFF;
@@ -173,7 +219,7 @@ form.sign-in {
   padding: 14px 33px;
   border-radius: 4px;
   margin-bottom: 29px; }
-  form.sign-in input {
+  .field-wrap input {
     color: #142A49;
     background-color: #FFFFFF;
     font-family: "Poppins", sans-serif;
@@ -181,37 +227,38 @@ form.sign-in {
     font-size: 14px;
     line-height: 21px;
     width: 100%;
-    padding: 12px 0;
+    padding: 12px 10px;
     max-width: 320px;
-    border: none; }
-    form.sign-in input:first-child {
-      border-bottom: 1px solid #DFDFDF; }
-    form.sign-in input::-webkit-input-placeholder {
+    border: 1px solid transparent;
+    border-radius: 10px; }
+    .field-wrap input.error {
+      border-color: red; }
+    .field-wrap input::-webkit-input-placeholder {
       color: #142A49;
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-size: 14px;
       line-height: 21px; }
-    form.sign-in input:-moz-placeholder {
+    .field-wrap input:-moz-placeholder {
       color: #142A49;
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-size: 14px;
       line-height: 21px; }
-    form.sign-in input::-moz-placeholder {
+    .field-wrap input::-moz-placeholder {
       color: #142A49;
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-size: 14px;
       line-height: 21px; }
-    form.sign-in input:-ms-input-placeholder {
+    .field-wrap input:-ms-input-placeholder {
       color: #142A49;
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-size: 14px;
       line-height: 21px; }
     @media (max-width: 525px) {
-      form.sign-in input {
+      .field-wrap input {
         width: 200px; } }
 
 .form {
@@ -239,4 +286,79 @@ form.sign-in {
   justify-content: center;
   align-items: center;
   height: calc(100% - 95px); }
+
+.walkthrough .main .content {
+  width: 100%;
+  max-width: 528px;
+  margin: 0 auto;
+  text-align: center; }
+  .walkthrough .main .content h1 {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 18px; }
+  .walkthrough .main .content p {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 31px;
+    -webkit-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -moz-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+    .walkthrough .main .content p.confirm {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 14px; }
+
+.walkthrough .plyr {
+  height: 314px;
+  margin-bottom: 26px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25); }
+  .walkthrough .plyr__poster {
+    background-size: cover; }
+  @media (max-width: 565px) {
+    .walkthrough .plyr {
+      width: 100%; } }
+
+@media (max-width: 565px) {
+  .walkthrough .video-wrapper {
+    padding: 0 15px; } }
+
+.walkthrough .rectangle {
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+  top: 0;
+  right: 0; }
+  .walkthrough .rectangle.first {
+    width: 628px;
+    height: 700px;
+    background-image: url(acd273b65d947230c0165d8e478cd714.svg);
+    animation: appear 5s 1; }
+  .walkthrough .rectangle.second {
+    width: 666px;
+    height: 604px;
+    background-image: url(83ef48f7a803ce670c70e8f3852b2c19.svg);
+    animation: slide 2s 1; }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
 

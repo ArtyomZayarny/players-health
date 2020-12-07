@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Player's Health</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -23,20 +23,30 @@
             </div>
         </div>
     </header>
-    <span class="circle one"></span>
-    <span class="circle two"></span>
+
+    <span class="deco first">
+        <span class="circle one"></span>
+    </span>
+    <span class="deco second">
+        <span class="circle two"></span>
+    </span>
     <main class="main">
         <div class="container">
             <div class="content">
                 <div class="form">
                     <h2 class="form__title">Sign in</h2>
                     <form action="" class="sign-in">
-                        <input type="text" name="contact" placeholder="Email / phone number" />
-                        <input type="password" name="password" placeholder="Password">
+                        <div class="field-wrap">
+                            <input class="" id="contact" value="test@gmail.com" type="text" name="contact"
+                                placeholder="Email / phone number" />
+                            <hr class="break" />
+                            <input id="password" value="lorem182" type="password" name="password"
+                                placeholder="Password">
+                        </div>
                     </form>
-                    <a href="#" class="reset">Reset password</a>
+                    <a href="walkthrough.html" class="reset">Reset password</a>
+                    <button class="btn sign-in" id="sign-in">Sign in</button>
                     <div class="btns-area">
-                        <button class="btn sign-in">Sign in</button>
                         <span class="or">Or</span>
                         <button class="btn with">Sign in with <img src="../src/assets/images/se.svg" /></button>
                     </div>
@@ -45,6 +55,7 @@
         </div>
     </main>
     <footer></footer>
+    <script src="../src/scripts.js"></script>
 </body>
 
 </html>

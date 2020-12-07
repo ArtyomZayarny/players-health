@@ -1,0 +1,84 @@
+.walkthrough {
+
+    .main {
+        .content {
+            width: 100%;
+            max-width: 528px;
+            margin: 0 auto;
+            text-align: center;
+                h1{
+                    color:$white;
+                    @include text(32px,500,37px);
+                    margin-bottom: 18px;
+                }
+                p {
+                    color:$white;
+                    @include text(18px,500,26px);
+                    margin-bottom: 31px;
+                    -webkit-text-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+                         -moz-text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+                        text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+                    &.confirm {
+                        @include text(14px,400,21px);
+                        margin-bottom: 14px;
+                    }
+                }
+        }
+    }
+    .plyr{    
+        height: 314px;    
+        margin-bottom: 26px;
+        border-radius: 4px;
+        -webkit-box-shadow:0 10px 28px rgba(0,0,0,0.25);
+        -moz-box-shadow:   0 10px 28px rgba(0,0,0,0.25);
+        box-shadow:        0 10px 28px rgba(0,0,0,0.25);
+        &__poster {
+            background-size: cover;
+        }
+        @media (max-width:565px) {
+            width:100%;
+        } 
+    }
+    .video-wrapper {
+        @media (max-width:565px) {
+            padding: 0 15px;
+        }
+    }
+   
+    .rectangle {
+        position: absolute;
+        background-size: cover;
+        z-index: -1;
+        top:0;
+        right:0;
+        &.first {
+            width:628px;
+            height:700px;
+            background-image: url('../src/assets/images/rect1.svg');
+            animation: appear 5s 1;
+        }
+        &.second {
+            width:666px;
+            height:604px;
+            background-image: url('../src/assets/images/rect2.svg');
+            animation: slide 2s 1;
+        }
+    }
+}
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slide {
+    0% {
+   transform:translateX(100%);
+    }
+    100% {
+        transform:translateX(0);
+    }
+  }

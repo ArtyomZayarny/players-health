@@ -1,7 +1,7 @@
 @import './vars';
 @import './mixins';
 
-form.sign-in {
+.field-wrap{
     display: flex;
     flex-direction: column;
     background-color: $white;
@@ -15,12 +15,14 @@ form.sign-in {
         background-color: $white;
         @include text(14px,500,21px);
         width: 100%;
-        padding: 12px 0;
+        padding: 12px 10px;
         max-width: 320px;
-        border: none;
-        &:first-child {
-            border-bottom: 1px solid $breakLineColor;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        &.error {
+            border-color:red
         }
+       
         &::-webkit-input-placeholder {
             color:$inputTextColor;
             @include text(14px,500,21px);
