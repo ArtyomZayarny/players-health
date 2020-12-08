@@ -329,9 +329,22 @@ span.or {
     .walkthrough .plyr {
       width: 100%; } }
 
-@media (max-width: 565px) {
-  .walkthrough .video-wrapper {
-    padding: 0 15px; } }
+.walkthrough .video-wrapper {
+  position: relative; }
+  .walkthrough .video-wrapper .arrow {
+    position: absolute;
+    bottom: 86px;
+    left: -183px;
+    width: 101px;
+    height: 8px;
+    background: url(f58fc22ee8aa04c1894b4ce35ddca22d.svg) no-repeat center;
+    background-size: cover; }
+    @media (max-width: 768px) {
+      .walkthrough .video-wrapper .arrow {
+        display: none; } }
+  @media (max-width: 565px) {
+    .walkthrough .video-wrapper {
+      padding: 0 15px; } }
 
 .walkthrough .rectangle {
   position: absolute;

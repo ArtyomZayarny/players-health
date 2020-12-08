@@ -40,6 +40,20 @@
         } 
     }
     .video-wrapper {
+        position:relative;
+        .arrow {
+            position: absolute;
+            bottom:86px;
+            left:-183px;
+            width:101px;
+            height:8px;
+            background: url('../src/assets/images/arrow.svg') no-repeat center;
+            background-size: cover;
+            @media (max-width:768px) {
+                display: none;
+            }
+        }
+       
         @media (max-width:565px) {
             padding: 0 15px;
         }
@@ -64,6 +78,7 @@
             animation: slide 2s 1;
         }
     }
+   
 }
   
   @keyframes appear {
